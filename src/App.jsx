@@ -4,6 +4,7 @@ import Greeting from './components/pure/greeting'
 import GreetingF from './components/pure/greetingF'
 import Ejemplo1 from './hooks/Ejemplo1'
 import Ejemplo2 from './hooks/Ejemplo2'
+import Ejemplo3 from './hooks/Ejemplo3'
 import MiComponenteConContexto from './hooks/Ejemplo3'
 import Ejemplo4 from './hooks/Ejemplo4'
 
@@ -19,8 +20,9 @@ function App() {
     {/* <Ejemplo2></Ejemplo2> */}
     {/*  */}
     {/* <MiComponenteConContexto/> */}
+    {/* <Ejemplo3></Ejemplo3> */}
+    {/* Todo lo que hay aqui, es tratado como props.children */}
     <Ejemplo4 nombre='Yasar'>
-      {/* Todo lo que hay aqui, es tratado como props.children */}
       <h3>
         Contenido del props.children
       </h3>
