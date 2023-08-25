@@ -7,6 +7,7 @@ import Ejemplo2 from './hooks/Ejemplo2'
 import Ejemplo3 from './hooks/Ejemplo3'
 import MiComponenteConContexto from './hooks/Ejemplo3'
 import Ejemplo4 from './hooks/Ejemplo4'
+import AllCycles from './hooks/lifecycle/AllCycles'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
     {/* <Greeting name="Yasar"/> */}
     {/* <GreetingF name="Yasar"/> */}
     {/* Componente de listado de tareas */}
-    {/* <TaskListComponent></TaskListComponent> */}
+    <TaskListComponent></TaskListComponent>
     {/* Ejemplos de uso de HOOKS */}
     {/* <Ejemplo1></Ejemplo1> */}
     {/* <Ejemplo2></Ejemplo2> */}
@@ -22,11 +23,12 @@ function App() {
     {/* <MiComponenteConContexto/> */}
     {/* <Ejemplo3></Ejemplo3> */}
     {/* Todo lo que hay aqui, es tratado como props.children */}
-    <Ejemplo4 nombre='Yasar'>
+    {/* <Ejemplo4 nombre='Yasar'>
       <h3>
         Contenido del props.children
       </h3>
-    </Ejemplo4>
+    </Ejemplo4> */}
+    {/* <AllCycles></AllCycles> */}
     </>
   )
 }
