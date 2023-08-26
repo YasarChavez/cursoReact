@@ -21,7 +21,7 @@ export class DidMount extends Component {
 export const DidMountHook = () => {
     useEffect(() => {
         console.log('Comportamiento antes de que el componente sea añadido al DOM');
-    }, []); //Dejando los corchetes vacios se ejecuta una al renderizar
+    }, []); //Dejando los corchetes vacios se ejecuta una vez al renderizar
 
     return (
         <div>

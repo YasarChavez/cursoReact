@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { PropTypes } from 'prop-types';
 
 //Definiendo estilos en constantes
 
@@ -19,14 +20,18 @@ const GreetingStyled = (props) => {
 
   const [logged, setLogged] = useState(false);
 
+  const greetingUser = () => <p>Hola,{props.name}</p>;
+  const pleaseLogin = () => <p>Please login</p>;
+
   return (
     <div style={logged ? loggedStyle : unloggedStyle}>
-        {logged ?  (<p>Hola,{props.name}</p>) : (<p>Please login</p>)}
-     
-      <button onClick={() => {
+      {logged ? greetingUser() : pleaseLogin()}
+      <button
+        onClick={() => {
           console.log("Boton pulsado");
           setLogged(!logged);
-        }}>
+        }}
+      >
         {logged ? "Logout" : "Login"}
       </button>
     </div>
