@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 
-const Child = ({ name }) => {
+const Child = ({ name, send }) => {
+    const messageRef = useRef('')
+
     function pressButton() {
-        alert("Default Text");
+        const text = messageRef.current.value
+        alert(`Text in input ${text}`);
     }
     function pressButtonParams(text) {
         alert(`Text: ${text}`);
@@ -17,6 +20,15 @@ const Child = ({ name }) => {
             {/* SINO EN EL EVENTO (ONCLICK EN ESTE CASO) */}
             {/* ()=> */}
             <button onClick={() => pressButtonParams("Hello")}>Boton 3</button>
+            <input 
+            ref={messageRef} 
+            placeholder="Insert a text" 
+            onFocus={() => console.log("Input Focused")} 
+            onChange={(e) => console.log("Input Changed", e.target.value)} 
+            onCopy={() => console.log("Copied text from input")}
+            // onCopy={() => {messageRef.current.value='No se copia nene!',console.log('salio')}}
+            />
+            <button onClick={() => send(messageRef.current.value)}>Send Message</button>
         </div>
     );
 };
